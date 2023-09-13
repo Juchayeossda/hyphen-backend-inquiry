@@ -1,0 +1,19 @@
+package com.get.hyphenbackendinquiry.domain.inquiry.presentation.dto.response;
+
+import com.get.hyphenbackendinquiry.domain.inquiry.domain.Inquiry;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+
+import java.util.List;
+
+@Schema(title = "getAllInquiryResponse: 문의 조회 응답 Dto", description = "서비스 문의 조회 응답 객체")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class GetAllInquiryResponse {
+
+    @Schema(description = "문의 정보 리스트")
+    private List<Inquiry> inquiries;
+}
